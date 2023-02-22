@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <style>
+    :root {
+      --darkCyan: hsl(185, 75%, 39%);
+      --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+      --darkGrayishBlue: hsl(227, 10%, 46%);
+      --darkGray: hsl(0, 0%, 59%);
+
+      font-size: 18px;
+      font-family: 'Kumbh Sans', sans-serif;
+      color: var(--veryDarkDesaturatedBlue);
+    }
+
+    body {
+      --offsetX: -10em;
+      --offsetY: -20em;
+
+      background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+      background-repeat: no-repeat;
+      background-position: top var(--offsetY) left var(--offsetX), bottom var(--offsetY) right var(--offsetX);
+      background-size: contain;
+      background-color: hsl(185, 75%, 39%);
+    }
+
+    main {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 1.25em;
+    }
+
+    .user {
+      background-color: white;
+      border-radius: 0.75em;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      overflow: hidden;
+      max-width: 19em;
+      box-shadow: 0 25px 50px -12px rgb(45 50 72 / 0.5);
+    }
+
+    .header {
+      position: relative;
+      height: 10em;
+    }
+
+    .pattern {
+      position: absolute;
+    }
+
+    .avatar {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 50%;
+      border: 0.25em solid white;
+    }
+
+    .info {
+      text-align: center;
+      display: grid;
+      gap: 0.25em
+    }
+
+    h1 {
+      font-size: 1em;
+      color: hsl(229, 23%, 23%);
+    }
+
+    .age {
+      padding: 0.25em;
+      color: var(--darkGrayishBlue);
+      font-weight: normal;
+    }
+
+    h2 {
+      font-size: 0.75em;
+      font-weight: normal;
+      color: var(--darkGrayishBlue);
+    }
+
+    .stats {
+      border: 1px solid hsl(0, 0%, 92.5%);
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      text-align: center;
+      padding: 1.25em 2em;
+    }
+
+    .stat {
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 0.75em;
+      font-weight: normal;
+      letter-spacing: 0.25;
+      color: var(--darkGrayishBlue);
+    }
+
+    footer {
+      position: relative;
+      text-align: center;
+      margin: auto;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="user">
+      <div class="header">
+        <img class="pattern" src="images/bg-pattern-card.svg" alt="Card-header">
+        <img class="avatar" src="images/image-victor.jpg" alt="victor-image">
+      </div>
+      <div class="info">
+        <h1>Victor Crest
+          <span class="age">26</span>
+        </h1>
+        <h2>London</h2>
+      </div>
+      <div class="stats">
+        <div class="followers">
+          <span class="stat">80K</span>
+          <h3>Followers</h3>
+        </div>
+        <div class="likes">
+          <span class="stat">803K</span>
+          <h3>Likes</h3>
+        </div>
+        <div class="photos">
+          <span class="stat">1.4K</span>
+          <h3>Photos</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Noeliaig">Noelia Iglesias</a>.
+    </div>
+  </footer>
+</body>
+</html>
